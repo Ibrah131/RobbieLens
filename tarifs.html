@@ -22,6 +22,7 @@
     <script src="scripts/popup.js" defer></script>
     <script src="scripts/script.js" defer></script>
     <script src="scripts/main.js" defer></script> <!-- This is doing the same job as the <link> element  main.js utilise des variables de config.js -->
+    <script src="scripts/formules.js" defer></script> <!-- This is doing the same job as the <link> element  main.js utilise des variables de config.js -->
 
 </head>
 
@@ -53,9 +54,40 @@
     </header>
 
     <main>
+        <section>
+            <h1>Tarifs</h1> <br>
+
+            <form id="commandeForm">
+                <h2>Choisissez une formule :</h2>
+                <input type="radio" id="formuleBasique" name="formule" value="basique">
+                <label for="formuleBasique">Formule Basique (500 €)</label><br>
+                
+                <input type="radio" id="formulePremium" name="formule" value="premium">
+                <label for="formulePremium">Formule Premium (800 €)</label><br>
+                
+                <input type="radio" id="formuleMariage" name="formule" value="mariage">
+                <label for="formuleMariage">Formule Mariage Complet (1200 €)</label><br><br>
+              
+                <h2>Photographes supplémentaires :</h2>
+                <label for="photographes">Nombre :</label>
+                <input type="number" id="photographes" name="photographes" min="0" max="2" value="0"><br><br>
+              
+                <h2>Options supplémentaires :</h2>
+                <input type="checkbox" id="tv" name="options" value="tv">
+                <label for="tv">Projections sur TV (+50 €)</label><br>
+                
+                <input type="checkbox" id="drone" name="options" value="drone">
+                <label for="drone">Utilisation du drone (+100 €)</label><br><br>
+              
+                <p id="prixTotal">Prix total : 0 €</p>
+                <button type="submit">Passer la commande</button>
+              </form>
+              
+              
+        </section>
         <section class="conthero">
 
-            <h1>Tarifs</h1> <br>
+
             <h2>Studio pro</h2> <br>
             <table>
                 <thead>
