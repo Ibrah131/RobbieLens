@@ -1,0 +1,433 @@
+/** Notes:
+
+    Check course later for responsive styles
+    
+    !! Track useless lines
+
+**/
+
+/****** header (height px : 77px(!)) *********/  
+header {
+    padding: 1em 3em 1em 3em;
+    background-color : white;
+    /* position:sticky;
+    top:0px;
+    z-index:10;
+    cursor: pointer; */
+}
+
+
+.containerheader{
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    
+}
+
+
+
+
+header nav  ul{
+    display: flex; /* Dispose les éléments en une seule ligne */
+    flex-wrap: wrap; 
+    flex-direction: row;
+    
+    list-style-type: none; /* Retire les puces des éléments de liste */
+    padding: 0;
+    margin: 0;
+}
+
+header nav li {
+    margin-right: 4rem; /* Espace entre les éléments du menu */
+}
+
+
+
+a{
+    font-family: Manrope;
+    text-decoration: none;
+    font-weight: bold;
+    color :rgb(255, 255, 255);
+}
+
+a:hover {
+    text-decoration: underline;
+    
+}
+
+
+
+
+header  a img:hover, footer a img:hover {
+    transform: scale(1.1); /* Transition pour l'effet de zoom */
+    opacity: 0.5
+}
+
+
+a img {
+    transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+}
+
+
+.a1{
+    font-family: Manrope;
+    text-decoration: none;
+    font-weight: bold;
+    color :#000000;
+}
+
+
+
+
+.cta {
+    font-family: Manrope;
+    background: linear-gradient(#8E86B5, #ACAEED);
+    color:rgb(255, 255, 255);
+
+    padding: 1em 1em;
+    border-radius: 30px;
+    font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+    text-transform: uppercase;
+    text-align: center;
+
+    cursor: pointer;
+    
+    border: none;
+}
+
+
+
+
+.a1:hover, .a2:hover,.cta:hover, .a1:focus, .a2:focus {
+    background: linear-gradient(#8E86B5, #ACAEED);
+    border-radius:50px;
+    color:gold;
+}
+
+
+
+/****** footer *********/
+footer{
+    padding: 1em 3em 1em 3em;
+    background-color: white;
+
+}
+
+
+footer, nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    margin-left: 30px;
+}
+
+/********* body *********/
+*{
+    margin: 0; /* réinitialiser les marges par défaut des navigateurs */
+    padding: 0;
+}
+
+
+:root { /* default theme (.theme-light) */
+    --color-bg: #bbb197;
+    --primary-color-h1: #18365c;
+    --primary-color-font: #131f30;
+  
+    --color-accent: #fd6f53;
+  }
+  
+.theme-dark {
+    --color-bg: #1f2039;
+    --primary-color-h1: #a5b4fc; 
+    --primary-color-font: #e3fff3;
+
+    --color-accent: #12cdea;
+}
+
+
+.theme-twilight {
+    --color-bg: #7B68EE;
+    --primary-color-h1: #eea9ff;
+    --primary-color-font: #caa9ff;
+
+    --color-accent: #12cdea;
+}
+  
+
+
+
+body {
+    font-family: 'Manrope', sans-serif;
+
+    background: var(--color-bg);
+}
+
+
+/*to correct :*/
+section{
+    padding-top:calc(3em + 2.778vh);  /* 3em*16px=48px + 2.778%*1080px = 50+30 =~80px (exo) */
+    padding-right: calc(3em + 1.5625vw); /* 50px + 1.5625%*1920px = 50+30 =~80px (exo) */
+    padding-bottom:calc(3em + 2.778vh);
+    padding-left: calc(3em + 1.5625vw); 
+
+    box-sizing: border-box !important;  /* for the height+padding js calcul x) */
+ 
+    /* border: 1px solid red; */
+}   
+
+.conthero{
+    height: calc(100vh - var(--header-height, 0px));
+    /* border: 3px solid rgb(110, 110, 110); */
+
+}
+
+article{
+    padding-top:calc(50px + 2.778vh);  /* 50px + 2.778%*1080px = 50+30 =80 (exo) */
+    padding-right: calc(50px + 1.5625vw); /* 50px + 1.5625%*1920px = 20+30 =80 (exo) */
+    padding-bottom:calc(50px + 2.778vh);
+    padding-left: calc(50px + 1.5625vw); 
+    /* border: 1px solid red; */
+}
+
+
+em {
+    color: #bd84ff;
+    font-style: normal;
+}
+
+
+
+p{
+    color: #F9F8FF;
+    font-family: Manrope;
+    font-size: 1.1rem;
+    text-align: justify ; 
+    max-width: 70ch;
+    text-indent: 20px;
+}
+
+
+
+h1{
+    color : var(--primary-color-h1);
+    margin:0 !important;
+    font-family: Montserrat, sans-serif;
+    font-size: 4vw;
+    
+    text-align: center;
+}
+
+h2{
+    color: #A5B4FC;
+    font-family: Montserrat, sans-serif;
+    font-size: minmax(3vw, 2vw);
+}
+
+h3{
+    color: #A5B4FC  ;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.8vw;
+    text-align: center;
+
+}
+
+
+
+
+
+p{
+    color: var(--primary-color-font);
+    font-family: Manrope;
+    font-size: 1.1rem;
+    text-align: justify ; 
+    max-width: 70ch;
+    text-indent: 20px;
+}
+
+
+
+ul, li{
+    color: #F9F8FF;
+    font-family: Manrope;
+    font-size: 1rem;
+}
+
+
+
+
+/***** section form *****/
+
+
+
+
+/************* containers**********/
+/* 
+.container1 {
+    display: flex;
+
+    flex-direction: row(default);
+    flex-wrap: wrap; 
+        (OU nowrap (default); (ecrase en 1 ligne)
+        OU wrap-reverse;) 
+    flex-flow: row wrap; (combine flex-direction + flex-wrap)
+
+    justify-content: stretch; (axe pcple ici les X ou row(ligne) car flex-direction:row;)
+        (ou flex-start (default)
+        ou flex-end;
+        ou center;
+        ou space-between;
+        ou space-around;
+        ou space-evenly;)
+
+    justify-items:
+
+    align-items:stretch (default); (axe scndre ici les Y ou verticale psq row)
+        flex-start;
+        ou flex-end;
+        ou center;
+        ou baseline; alignés sur la ligne de base (semblable à  flex-start  ).
+    (ou align-self pour just 1 item)
+
+    align-content:stretch (default); répartir le block sur plusieurs lignes
+        (ou flex-start
+        ou flex-end;
+        ou center;
+        ou space-between;
+        ou space-around;)
+     (align-content = l'espace entre les lignes cas Y 
+     align-items = comment les éléments dans leur ensemble sont alignées à l'intérieur du conteneur
+     1 seule ligne = align-content n'a aucun effet
+     align-content pt etre fusioné avec l'une des 2 autres)
+
+    order :...,-2,-1,0(default),1...;
+
+}
+*/ 
+
+
+
+
+
+/******** Personnalisation des barres de défilement ********/
+
+/* Pour Firefox  */
+
+/*Couleur de la poignée et de la piste */
+/*html {
+    scrollbar-color: #4CAF50 #ddd;  Poignée verte, piste grise 
+    scrollbar-width: thin;  Barre plus fine */ 
+/*}*/
+
+
+/* Pour Webkit-based browsers (Chrome, Safari, Edge, etc.) */
+
+/*extension propriétaire?*/
+
+/* Personnaliser la totalité de la barre de défilement */
+::-webkit-scrollbar {
+    width: 12px; /* Largeur de la barre verticale */  
+    height: 12px; /* Hauteur de la barre horizontale */
+}
+
+/* Customize the scrollbar handle (thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.212);/* Color of the handle */
+    border-radius: 60% 60% 60% 60% / 60% 60% 60% 60% ; /* Rounded corners */
+    border: 1px solid rgba(0, 0, 0, 0.212); /* Border around the handle */
+}
+
+/* Customize the part of the track not covered by the handle */
+::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, rgb(70, 88, 252) 1%, rgb(251, 63, 141) 100%); /* Color of the track */
+    border-radius: 1px ; /* Rounded corners */
+}
+
+/*
+ Customize the part of the track where the thumb does not cover
+::-webkit-scrollbar-track-piece {
+    background: linear-gradient(180deg, rgb(252, 225, 70) 15%, rgba(251, 63, 63, 0.7) 100%); /* Color of the track piece */ 
+/*    border-radius: 40px;*/
+/* } */
+
+/* Scrollbar buttons (arrows) */
+::-webkit-scrollbar-button {
+    width: 16px; /* Width of the scrollbar button */
+    height: 16px; /* Height of the scrollbar button */
+    background-color: #a7ffe9; /* Background color for the button */
+    background-repeat: no-repeat; /* Prevent repeating of the background image */
+    background-size: 12px 12px; /* Size of the background image */
+    background-position: center; /* Center the background image */
+}
+
+/* Up/Left arrow button */
+::-webkit-scrollbar-button:single-button:decrement {
+    background-image: url('https://img.icons8.com/?size=80&id=rJSINIXLwINM&format=png'); /* URL to the up arrow image */
+}
+
+/* Down/Right arrow button */
+::-webkit-scrollbar-button:single-button:increment {
+    background-image: url('https://img.icons8.com/?size=80&id=rJSINIXLwINM&format=png'); /* URL to the down arrow image */
+}
+
+
+
+/********************* Media Queries : ***********************/
+
+
+
+@media screen and  (max-width: 1200px) {
+
+    h1{
+        font-size: 7vw;
+    }
+
+    
+    h2{
+        font-size: 4vw;
+    }
+
+
+    h3{
+        font-size: 3vw;
+    }
+    
+    
+
+
+    .containerheader  {
+        /* border: 1px solid red; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .containerheader ul {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .containerheader li {
+        margin: 0;
+      }
+
+    
+      header nav img {
+        margin-bottom: 20px;
+      }
+    
+      /* header,
+      footer {
+        padding: 20px 20px;
+      } */
+    
+}
+
+
+
+/* Note section vw issue under screen width 380px*/

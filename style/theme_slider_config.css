@@ -1,0 +1,133 @@
+
+
+/* Container setup */
+.container-theme-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  z-index: 99; /*fixed's on top of other optential positions like absolute*/
+
+  top: 1em;
+  right: 1em;
+
+  height: 30px; 
+  width: 60px ;
+}
+
+/* The button styled as a slider */
+.slider-button {
+  position: relative;
+
+  border: none;
+  border-radius: 34px;
+
+  height: 100%; 
+  width: 100%; 
+
+  background-color: #2196f3;
+
+  /* transition: background-color 1s; */
+
+  user-select: none;  /* Disable text cursor appearing inside <btn></btn> in the page*/
+
+  /* overflow: hidden; */
+}
+
+/* The circle inside the button (instead of using ::before) */
+.slider-circle {
+  position: absolute;
+  
+  height: 120%;
+  aspect-ratio: 1;
+  box-sizing: border-box;
+
+  top: 50%;
+  left: 0%;
+  transform: translate(0%,-50%);
+
+  cursor: pointer;
+
+  transition: 0.8s;
+
+  border-radius: 50%;
+
+
+  background: url('https://i.ibb.co/7JfqXxB/sunny.png') no-repeat center;
+  
+  box-shadow: inset 0 0 15px rgba(236, 212, 1, 0.575);
+  /* border: 1px solid red; */
+}
+
+/* When active (dark mode), translate the circle and change background */
+.slider-button.dark { /*decorate background  */
+  background-color: #313131b2;
+
+} 
+
+.slider-circle.dark { /* translate circle when btn activated x)*/
+  transform: translate(33.75%,-50%);
+  /* border: 1px solid red; */
+
+
+  
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.295);
+
+  background: url('https://i.ibb.co/FxzBYR9/night.png') no-repeat center;
+}
+
+
+
+.slider-button.twilight {
+  background-color: #FF69B4; /* A distinct color for twilight theme */
+}
+
+.slider-circle.twilight {
+  transform: translate(67.5%, -50%); /* Translate further for the third state */
+  background: url('https://cdn-icons-png.freepik.com/512/15077/15077723.png') no-repeat center; /* Use an image for the twilight mode */
+  background-size: 80% 80%;
+  box-shadow: inset 0 0 15px rgba(255, 73, 27, 0.637); /* Twilight effect */
+}
+
+
+/* Hover effect  
+.slider-button:hover {
+  background-color: #2195f375;
+}
+*/
+ 
+
+
+
+/******** MQ ******/
+
+@media screen and (min-width: 701px) and (max-width: 1200px){
+  
+  .container-theme-slider{
+    scale:0.9;
+  }
+}
+
+
+@media screen and (max-width: 700px){
+  
+  .container-theme-slider{
+    scale:0.9;
+    transform: rotate(90deg) translate(30%,-50%);
+  }
+
+  .slider-circle{
+    transform: rotate(-90deg) translate(50%,0%);
+  }
+
+  .slider-circle.dark{
+    transform: rotate(-90deg) translate(50%,33.75%);
+  }
+
+  .slider-circle.twilight{
+    transform: rotate(-90deg) translate(50%,67.5%);
+  }
+}
+

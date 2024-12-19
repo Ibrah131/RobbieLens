@@ -1,0 +1,138 @@
+/********************* A propos : ***********************/
+.contmoi-A{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    height: 100%;
+    /* border: 1px solid #09ff2a ; */
+}
+
+.grdAmoi {
+    display: grid;  
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    /*or a 2x1 grid is: grid-template : repeat(2, 1fr)/ 1fr;*/
+    width:60%;
+
+    position: absolute;
+
+
+    gap:20px;
+    z-index: 1;
+    /* border: 1px solid #ffe609 ; */
+}
+
+.square{
+    background-color:rgba(44, 46, 81, 1);
+
+    width: 40%;
+    aspect-ratio: 5/4;
+    
+    position : absolute;
+
+    top: 55%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+
+    /* z-index: 0; */
+    
+}
+
+.A1-1 img {
+    object-fit: cover;
+    width: 100%;
+
+    margin: 0 rem;
+
+}
+
+.moi-A2 {
+    /* border: 1px solid yellow; */
+
+
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rgb(122, 9, 9); */
+
+    height: 100%;
+}
+
+
+
+.formebg1 {
+    /* background : radial-gradient(circle, rgba(70, 252, 164, 0.4) 5%, #1F2039 60%); */
+    border-radius:0px 24px 24px 0px / 0px 24px 24px 0px ;
+    box-shadow : inset 0px 0px 25px 0px rgba(70, 252, 164, 0.24);
+    padding: 0em 0.2em 0.2em 0;
+    /* border: 1px solid #1f2039; */
+
+}
+
+.formebg2 {
+    background : radial-gradient(circle, rgba(70, 252, 164, 0.3) 5%, #1f2039 45%);
+    border-radius:0px 24px 24px 0px / 0px 24px 24px 0px ;
+    /* box-shadow : 0px 0px 25px 0px rgba(0, 128, 79, 0.44) */
+    /* margin:0 2rem 0 0; */
+    
+}
+
+
+.B1-1{
+    padding:1em 1em 1em 0;
+    text-align:left;
+}
+
+.B2-1 p{
+    max-width: 70ch;
+}
+
+.B2-1{
+    padding:1em 4em 4em 3em;
+}
+
+.B2-1 p::first-letter {
+    font-size: 4rem;      
+}
+.B2-1 h2::first-letter {
+    font-size: 4rem;      
+}
+
+.B3-1{
+    padding:0 0 0 1em;
+}
+
+.B4-1{
+    padding: 4em 0 4em 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/********************* Media Queries : ***********************/
+
+
+
+/* Media query to switch to single column layout */
+@media (max-width: 1200px) {
+
+    .conthero{
+        height: 100%;
+    }
+
+    .grdAmoi {
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: repeat(5, 1fr);
+        width:60%;
+        position: static;
+      }
+    .square{
+        transform: rotate(90deg) translate(-50%, 100%);
+    }
+
+
+  }
