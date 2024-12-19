@@ -54,34 +54,56 @@
     </header>
 
     <main>
+        <br><h1>Tarifs</h1> <br>
         <section>
-            <h1>Tarifs</h1> <br>
-
-            <form id="commandeForm">
-                <h2>Choisissez une formule :</h2>
-                <input type="radio" id="formuleBasique" name="formule" value="basique">
-                <label for="formuleBasique">Formule Basique (500 €)</label><br>
-                
-                <input type="radio" id="formulePremium" name="formule" value="premium">
-                <label for="formulePremium">Formule Premium (800 €)</label><br>
-                
-                <input type="radio" id="formuleMariage" name="formule" value="mariage">
-                <label for="formuleMariage">Formule Mariage Complet (1200 €)</label><br><br>
+            <form id="commandeForm" class="formules">
+                <h2>Envoyer une Commande</h2>
               
-                <h2>Photographes supplémentaires :</h2>
-                <label for="photographes">Nombre :</label>
-                <input type="number" id="photographes" name="photographes" min="0" max="2" value="0"><br><br>
+                <!-- Nom du Client -->
+                <label for="nom_client">Nom :</label>
+                <input type="text" id="nom_client" name="nom_client" placeholder="Jean Dupont" required><br><br>
               
-                <h2>Options supplémentaires :</h2>
-                <input type="checkbox" id="tv" name="options" value="tv">
-                <label for="tv">Projections sur TV (+50 €)</label><br>
-                
-                <input type="checkbox" id="drone" name="options" value="drone">
-                <label for="drone">Utilisation du drone (+100 €)</label><br><br>
+                <!-- Email du Client -->
+                <label for="email_client">Email :</label>
+                <input type="email" id="email_client" name="email_client" placeholder="jean.dupont@example.com" required><br><br>
               
+                <!-- Sélection des Formules -->
+                <h3>Choisissez une Formule :</h3>
+                <label>
+                  <input type="radio" name="formule" value="Formule Basique" required>
+                  Formule Basique (500 €)
+                </label><br>
+                <label>
+                  <input type="radio" name="formule" value="Formule Premium">
+                  Formule Premium (800 €)
+                </label><br>
+                <label>
+                  <input type="radio" name="formule" value="Formule Mariage Complet">
+                  Formule Mariage Complet (1200 €)
+                </label><br><br>
+              
+                <!-- Nombre de Photographes Supplémentaires -->
+                <label for="photographes">Nombre de photographes supplémentaires :</label>
+                <input type="number" id="photographes" name="photographes" min="0" max="2" value="0" required><br><br>
+              
+                <!-- Options Supplémentaires -->
+                <h3>Options Supplémentaires :</h3>
+                <label>
+                  <input type="checkbox" name="options" value="Projections sur TV">
+                  Projections sur TV (+50 €)
+                </label><br>
+                <label>
+                  <input type="checkbox" name="options" value="Utilisation du drone">
+                  Utilisation du drone (+100 €)
+                </label><br><br>
+              
+                <!-- Prix Total -->
                 <p id="prixTotal">Prix total : 0 €</p>
-                <button type="submit">Passer la commande</button>
+              
+                <!-- Bouton pour Soumettre -->
+                <button type="submit">Passer la Commande</button>
               </form>
+              
               
               
         </section>

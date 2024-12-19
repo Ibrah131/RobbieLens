@@ -1,4 +1,54 @@
 
+.formules {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.formules h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.formules label {
+  display: block;
+  margin: 10px 0;
+  color: white;
+}
+.formules input[type="radio"],
+.formules input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+.formules input[type="number"] {
+  width: 50px;
+  margin-left: 10px;
+}
+
+.formules button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.formules button:hover {
+  background-color: #45a049;
+}
+#prixTotal {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+ 
+ 
  /******* table *********/
 table {
   border-collapse: collapse;

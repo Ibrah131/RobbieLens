@@ -1,34 +1,21 @@
-const form = document.getElementById('commandeForm');
-const formules = document.querySelectorAll('input[name="formule"]');
-const photographes = document.getElementById('photographes');
-const options = document.querySelectorAll('input[name="options"]');
-const prixTotal = document.getElementById('prixTotal');
+const form = document.getElementById("commandeForm");
+const prixTotalElement = document.getElementById("prixTotal");
 
-// Tarifs de base
+const formules = document.querySelectorAll('input[name="formule"]');
+const photographesInput = document.getElementById("photographes");
+const options = document.querySelectorAll('input[name="options"]');
+
+// Tarifs des formules et options
 const tarifs = {
-  basique: 500,
-  premium: 800,
-  mariage: 1200,
+  "Formule Basique": 500,
+  "Formule Premium": 800,
+  "Formule Mariage Complet": 1200,
   photographeSupplementaire: 200,
-  tv: 50,
-  drone: 100
+  "Projections sur TV": 50,
+  "Utilisation du drone": 100,
 };
 
-// Permettre de cocher une seule formule à la fois
-formules.forEach(formule => {
-  formule.addEventListener('change', () => {
-    formules.forEach(f => {
-      if (f !== formule) f.checked = false;
-    });
-    calculerPrix();
-  });
-});
-
-// Calcul du prix total
-form.addEventListener('change', () => {
-  calculerPrix();
-});
-
+// Fonction pour calculer le prix total
 function calculerPrix() {
   let total = 0;
 
@@ -40,7 +27,7 @@ function calculerPrix() {
   });
 
   // Ajouter le coût des photographes supplémentaires
-  total += photographes.value * tarifs.photographeSupplementaire;
+  total += photographesInput.value * tarifs.photographeSupplementaire;
 
   // Ajouter le coût des options supplémentaires
   options.forEach(option => {
@@ -50,5 +37,64 @@ function calculerPrix() {
   });
 
   // Mettre à jour l'affichage du prix total
-  prixTotal.textContent = `Prix total : ${total} €`;
+  prixTotalElement.textContent = `Prix total : ${total} €`;
 }
+
+// Calculer le prix total à chaque modification
+form.addEventListener("change", calculerPrix);
+
+// Envoi de la commande
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Récupérer les valeurs du formulaire
+  const nomClient = document.getElementById("nom_client").value;
+  const emailClient = document.getElementById("email_client").value;
+  const formule = document.querySelector('input[name="formule"]:checked').value;
+  const photographes = parseInt(photographesInput.value);
+  const selectedOptions = Array.from(options).filter(option => option.checked).map(option => option.value);
+
+  // Calculer le prix total une dernière fois
+  let total = 0;
+  total += tarifs[formule];
+  total += photographes * tarifs.photographeSupplementaire;
+  selectedOptions.forEach(option => {
+    total += tarifs[option];
+  });
+
+  // Créer l'objet commande
+  const commande = {
+    id: Date.now(),
+    nom_client: nomClient,
+    email: emailClient,
+    formule: formule,
+    photographes_supplementaires: photographes,
+    options: selectedOptions,
+    prix_total: total,
+    date: new Date().toISOString().split("T")[0],
+  };
+
+  // Envoyer la commande au backend
+  fetch("http://localhost:4000/commandes", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(commande),
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Erreur lors de l'envoi de la commande.");
+      }
+    })
+    .then(data => {
+      console.log("Commande enregistrée :", data);
+      alert("Votre commande a été enregistrée avec succès !");
+    })
+    .catch(error => {
+      console.error("Erreur :", error);
+      alert("Une erreur est survenue. Veuillez réessayer.");
+    });
+});
