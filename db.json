@@ -1,0 +1,16 @@
+{
+  "commandes": [
+    {
+      "id": 1734620334647,
+      "nom_client": "aze",
+      "email": "aze@uhgrfdsf",
+      "formule": "Formule Premium",
+      "photographes_supplementaires": 1,
+      "options": [
+        "Utilisation du drone"
+      ],
+      "prix_total": 1100,
+      "date": "2024-12-19"
+    }
+  ]
+}

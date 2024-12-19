@@ -43,6 +43,9 @@ function calculerPrix() {
 // Calculer le prix total à chaque modification
 form.addEventListener("change", calculerPrix);
 
+
+
+////////////////////////////////////////////
 // Envoi de la commande
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -98,3 +101,28 @@ form.addEventListener("submit", function (e) {
       alert("Une erreur est survenue. Veuillez réessayer.");
     });
 });
+
+
+  
+  /////////////////////////////////////////
+  // Fonction pour récupérer et afficher les commandes
+function afficherCommandes() {
+    fetch("http://localhost:4000/commandes")
+      .then(response => response.json())
+      .then(commandes => {
+        const listeCommandes = document.getElementById("listeCommandes");
+        listeCommandes.innerHTML = ""; // Vider la liste actuelle
+        commandes.forEach(commande => {
+          const commandeElement = document.createElement("li");
+          commandeElement.textContent = `Commande n°${commande.id} : ${commande.nom_client}, ${commande.formule}, Total : ${commande.prix_total} €`;
+          listeCommandes.appendChild(commandeElement);
+        });
+      })
+      .catch(error => {
+        console.error("Erreur :", error);
+      });
+  }
+  
+  // Charger les commandes au chargement de la page
+  document.addEventListener("DOMContentLoaded", afficherCommandes);
+  
