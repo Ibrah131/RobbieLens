@@ -48,6 +48,9 @@
   margin-top: 20px;
 }
  
+#supprimerCommandes {
+  cursor: pointer;
+}
  
  /******* table *********/
 table {
