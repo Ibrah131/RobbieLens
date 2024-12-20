@@ -70,6 +70,71 @@
       ],
       "prix_total": 550,
       "date": "2024-12-20"
+    },
+    {
+      "id": 1,
+      "nom_client": "Ibrahim jean baptiste de moliere",
+      "email_client": "jean.baptiste@example.com",
+      "formule": "Formule Premium",
+      "photographes_supplementaires": 1,
+      "options": [
+        "Projections sur TV",
+        "Utilisation du drone"
+      ],
+      "prix_total": 950,
+      "date": "2024-12-20"
+    },
+    {
+      "id": 1,
+      "nom_client": "Ibrahim jean baptiste de moliere",
+      "email_client": "jean.baptiste@example.com",
+      "formule": "Formule Premium",
+      "photographes_supplementaires": 1,
+      "options": [
+        "Projections sur TV",
+        "Utilisation du drone"
+      ],
+      "prix_total": 950,
+      "date": "2024-12-20"
+    },
+    {
+      "id": 1,
+      "nom_client": "Fabien Smartpastrop",
+      "email_client": "f.s@example.com",
+      "formule": "Formule Premium",
+      "photographes_supplementaires": 1,
+      "options": [
+        "Projections sur TV",
+        "Utilisation du drone"
+      ],
+      "prix_total": 950,
+      "date": "2024-12-20"
+    },
+    {
+      "id": 1,
+      "nom_client": "Thomas Smartunpeu",
+      "email_client": "t.s@example.com",
+      "formule": "Formule Premium",
+      "photographes_supplementaires": 1,
+      "options": [
+        "Projections sur TV",
+        "Utilisation du drone"
+      ],
+      "prix_total": 950,
+      "date": "2024-12-20"
+    },
+    {
+      "id": 1,
+      "nom_client": "Fabien Smartunpeu",
+      "email_client": "f.s2@example.com",
+      "formule": "Formule Premium",
+      "photographes_supplementaires": 1,
+      "options": [
+        "Projections sur TV",
+        "Utilisation du drone"
+      ],
+      "prix_total": 950,
+      "date": "2024-12-20"
     }
   ]
 }
