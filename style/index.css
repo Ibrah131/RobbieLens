@@ -2,6 +2,83 @@
 
 
 
+.equipe-materiel {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  .equipe-materiel h2 {
+    text-align: center;
+    color: #9c9c9c;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 2px solid #E29624;
+    display: inline-block;
+  }
+
+  
+  
+  .equipe, .materiel {
+    margin: 20px 0;
+  }
+  
+  .equipe-materiel h3, .equipe-materiel h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #9c9c9c;
+  }
+  
+  .membre, .equipement {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .equipe-materiel img {
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .equipe-materiel p, .equipe-materiel p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+
+  
+  .equipe-materiel ul li p {
+    margin: 0;
+  }
+  
+  .equipe-materiel h4 {
+    font-size: 1.5rem;
+    color: #9c9c9c;
+    margin: 15px 0;
+    border-bottom: 1px solid #E29624;
+    display: inline-block;
+  }
+  
+  
+  
+  
+  
+  
+  /**********************************************/
+
+
+
+
+
+
+
+/****************************************************/
 .conthero{
     display: flex;
     flex-direction: column;
@@ -460,3 +537,4 @@ textarea:focus, input:focus{
 
 
 }
+

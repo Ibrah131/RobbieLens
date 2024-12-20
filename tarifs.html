@@ -57,7 +57,7 @@
         <br><h1>Tarifs</h1> <br>
         <section>
             <form id="commandeForm" class="formules">
-                <h2>Vos coordonées</h2>
+                <h3>Vos coordonées</h3>
               
                 <!-- Nom du Client -->
                 <label for="nom_client">Nom :</label>
@@ -69,18 +69,23 @@
               
                 <!-- Sélection des Formules -->
                 <h3>Choisissez une Formule :</h3>
+
+                <label>
+                    <input type="radio" name="formule" value="Formule Mariage Complet">
+                    <a href="index.html#formuleComplete">Formule Mariage Complet (1200 €)</a>
+  
+                  </label><br>
+                  <label>
+                    <input type="radio" name="formule" value="Formule Premium">
+                    <a  href="index.html#formulePremium">Formule Premium (800 €)</a>
+  
+                  </label><br>
                 <label>
                   <input type="radio" name="formule" value="Formule Basique" required>
-                  Formule Basique (500 €)
-                </label><br>
-                <label>
-                  <input type="radio" name="formule" value="Formule Premium">
-                  Formule Premium (800 €)
-                </label><br>
-                <label>
-                  <input type="radio" name="formule" value="Formule Mariage Complet">
-                  Formule Mariage Complet (1200 €)
+                  <a href="index.html#formuleBasique">Formule Basique (500 €)</a>
                 </label><br><br>
+
+
               
                 <!-- Nombre de Photographes Supplémentaires -->
                 <label for="photographes">Nombre de photographes supplémentaires :</label>
