@@ -1,0 +1,75 @@
+{
+  "commandes": [
+    {
+      "id": 1734620334647,
+      "nom_client": "aze",
+      "email": "aze@uhgrfdsf",
+      "formule": "Formule Premium",
+      "photographes_supplementaires": 1,
+      "options": [
+        "Utilisation du drone"
+      ],
+      "prix_total": 1100,
+      "date": "2024-12-19"
+    },
+    {
+      "id": 1734686237795,
+      "nom_client": "acq536f",
+      "email": "sdezf@azd.cs",
+      "formule": "Formule Mariage Complet",
+      "photographes_supplementaires": 0,
+      "options": [
+        "Projections sur TV"
+      ],
+      "prix_total": 1250,
+      "date": "2024-12-20"
+    },
+    {
+      "id": 1734686601594,
+      "nom_client": "acq536f",
+      "email": "sdezf@azd.cs",
+      "formule": "Formule Basique",
+      "photographes_supplementaires": 1,
+      "options": [
+        "Projections sur TV"
+      ],
+      "prix_total": 750,
+      "date": "2024-12-20"
+    },
+    {
+      "id": 1734686715895,
+      "nom_client": "acq536",
+      "email": "aze@uhgrfd.fr",
+      "formule": "Formule Premium",
+      "photographes_supplementaires": 0,
+      "options": [
+        "Projections sur TV",
+        "Utilisation du drone"
+      ],
+      "prix_total": 950,
+      "date": "2024-12-20"
+    },
+    {
+      "id": 1734686789973,
+      "nom_client": "qsd",
+      "email": "qsd@er.com",
+      "formule": "Formule Mariage Complet",
+      "photographes_supplementaires": 0,
+      "options": [],
+      "prix_total": 1200,
+      "date": "2024-12-20"
+    },
+    {
+      "id": 1734687435848,
+      "nom_client": "qsd",
+      "email": "bouklib13@gmail.com",
+      "formule": "Formule Basique",
+      "photographes_supplementaires": 0,
+      "options": [
+        "Projections sur TV"
+      ],
+      "prix_total": 550,
+      "date": "2024-12-20"
+    }
+  ]
+}
